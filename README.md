@@ -1,6 +1,6 @@
 # Voice Chat Application
 
-This repository contains the frontend and backend code for a voice chat application. The frontend is built with Vue.js, and the backend is powered by Strapi.
+This repository contains both the frontend and backend code for a real-time voice chat application. The frontend is built using Vue.js, while Strapi powers the backend. The real-time functionality is enabled by WebRTC with PeerJS.
 
 ## Project Structure
 
@@ -67,11 +67,22 @@ npm run serve
 npm run build
 ```
 
-#### Lints and fixes files
+### PeerJS Server
 
-```sh
-npm run lint
+PeerJS server for signaling.
+
+#### Install PeerJS Globally
+
+```bash
+npm install peer -g
 ```
+
+#### Start the PeerJS Server
+
+```bash
+peerjs --port 9000 --key peerjs --path /myapp
+```
+
 
 For more information, see the [Vue CLI documentation](https://cli.vuejs.org/config/).
 
